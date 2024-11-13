@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleadmin.css') }}">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <form method="POST" action="{{ url_for('auth.admin') }}">
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Give Access</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>
+                    <input type="hidden" name="user_id" value="{{ user.id }}">
+                    <input type="checkbox" name="can_upload_multiple_{{ user.id }}" value="1" {% if user.CanUploadMultiple %}checked{% endif %}>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button type="submit">Update</button>
+        <a style="margin-left: 640px;" href="{{ url_for('auth.logout') }}">Logout</a>
+    </form>
+</body>
+</html>

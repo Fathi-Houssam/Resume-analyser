@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Named Entities</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1 style="margin-left: 30px;">Named Entities</h1>
+
+  <div class="entities-container">
+    {% set categories = entities | groupby('label') %}
+    {% for category, items in categories %}
+      <div class="entity-category">
+        <h2>{{ category }}</h2>
+        <div class="entity-tags">
+          {% for item in items %}
+            <span class="entity-tag">{{ item.text }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>

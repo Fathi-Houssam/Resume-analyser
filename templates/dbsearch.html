@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Resumes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Search Resumes</h1>
+    <form action="{{ url_for('search_results') }}" method="get">
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" name="degree">
+      
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" name="skills">
+      
+      <label for="yearsofexperience">Years Of Experience:</label>
+      <input type="text" id="yearsofexperience" name="yearsofexperience">
+      
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>

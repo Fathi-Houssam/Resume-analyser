@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Parser</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <a href="{{ url_for('upload_multiple_files') }}">Upload Multiple Resumes</a>
+    <a href="{{ url_for('dbsearch') }}">Search Resumes</a>
+    <h1>Upload Your Resume</h1>
+    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form">
+      <label for="pdf" class="upload-label">Select PDF:</label>
+      <input type="file" id="pdf" name="file" accept=".pdf" class="upload-input">
+      <button type="submit" class="upload-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

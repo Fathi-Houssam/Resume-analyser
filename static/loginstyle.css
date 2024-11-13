@@ -1,0 +1,131 @@
+/* CSS Boilerplate for Body */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: Arial, sans-serif; /* Default font */
+  font-size: 16px; /* Default font size */
+  color: #333; /* Default text color */
+  background-color: #2c2c2c; /* Dark grey to black background */
+  line-height: 1.6; /* Improve text readability */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Reset some common elements */
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, blockquote, figure, pre, table {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none; /* Remove default list styles */
+}
+
+img {
+  max-width: 100%; /* Ensure responsive images */
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}
+
+button {
+  cursor: pointer; /* Pointer cursor on buttons */
+}
+
+/* Ensure full height for flexbox parents */
+html, body {
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
+}
+
+.container {
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 25px; /* Adjust padding inside the box */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjust shadow for the box */
+  border-radius: 10px; /* Slightly more rounded corners */
+  text-align: center; /* Center align text */
+  transform: scale(1.15); /* Scale the container to be 15% bigger */
+}
+
+h2 {
+  font-size: 1.9em; /* Adjust heading size */
+  margin-bottom: 20px; /* Add margin below heading */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 17px; /* Adjust space between form elements */
+  width: 100%; /* Full width form groups */
+}
+
+.form-group label {
+  display: block; /* Label above input */
+  margin-bottom: 6px; /* Adjust space between label and input */
+  font-size: 1.15em; /* Adjust label font size */
+  text-align: left; /* Align label text to the left */
+}
+
+.form-group input {
+  width: 100%; /* Full width input */
+  padding: 11px; /* Adjust padding inside input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly more rounded corners */
+  font-size: 1.15em; /* Adjust input font size */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+button {
+  background-color: #4CAF50; /* Green button */
+  color: white; /* White text */
+  padding: 11px 23px; /* Adjust padding inside button */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly more rounded corners */
+  margin-top: 13px; /* Adjust space above button */
+  display: block; /* Block level element */
+  width: 100%; /* Full width button */
+  font-size: 1.15em; /* Adjust button font size */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+p {
+  margin-top: 17px; /* Adjust space above paragraph */
+  font-size: 1.15em; /* Adjust paragraph font size */
+}
+
+ul {
+  margin-top: 17px; /* Adjust space above messages list */
+}
+
+li {
+  color: red; /* Default message color */
+  font-size: 1.15em; /* Adjust message font size */
+}
+
+li.error {
+  color: red; /* Error message color */
+}
+
+li.success {
+  color: green; /* Success message color */
+}
